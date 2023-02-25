@@ -1,0 +1,36 @@
+@import './../../resources/styles/variables.less';
+
+.card {
+  box-sizing: border-box;
+  font-family: @font-poppins-bold;
+  font-weight: 700;
+  font-size: 1.6rem;
+  background-color: @fourth-color;
+  color: @third-color;
+  border-radius: 1.2rem;
+  min-height: auto;
+  min-width: 100%;
+  padding-top: 4.3rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 3rem;
+
+  &__question {
+    display: flex;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    &--text {
+      margin: 0;
+      font-family: @font-poppins-bold;
+      font-weight: 700;
+      font-size: 1.9rem;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
