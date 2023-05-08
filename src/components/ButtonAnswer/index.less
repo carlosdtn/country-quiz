@@ -12,6 +12,7 @@
   color: @primary-color;
   margin-bottom: 1.4rem;
   padding-left: 1.3rem;
+  padding-right: 0.5rem;
   align-items: center;
   box-sizing: border-box;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
@@ -19,23 +20,39 @@
   &__letter {
     display: flex;
     min-width: 20%;
+    font-size: 1.5rem;
   }
   &__box {
     margin: 0;
     font-size: 1.25rem;
     vertical-align: center;
-    height: auto;
+    white-space: nowrap;
+  }
+  &__icon {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
   }
   &:focus {
     outline: none;
   }
-  &:hover {
-    background-color: @secondary-color;
-    color: white;
-    color: white;
-    border-color: @secondary-color;
+  &--hover {
+    &:hover {
+      background-color: @secondary-color;
+      color: white;
+      border-color: @secondary-color;
+    }
   }
 }
-// .option--correct:active {
-//   background-color: @sixth-color;
-// }
+.option--correct {
+  background-color: @sixth-color;
+  color: white;
+  border-color: @sixth-color;
+}
+
+.svg-check {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}

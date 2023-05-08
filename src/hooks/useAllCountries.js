@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import {
-  getFourCountries,
-  getFinalAlternatives
-} from '../utilities/functions.js'
+  getFinalAlternatives,
+  getFourCountries
+} from '../utilities/functions.ts'
 import { baseURL } from '../utilities/constants.ts'
 
 export default function useAllCountries() {
@@ -18,8 +18,8 @@ export default function useAllCountries() {
       })
   }, [])
 
-  const data = getFourCountries(country)
-  const { formattedAlternatives, capital } = getFinalAlternatives(data)
+  const groupQuestion = getFourCountries(country)
+  const { groupedAlternatives } = getFinalAlternatives(groupQuestion)
 
-  return { formattedAlternatives, capital, isLoading }
+  return { groupedAlternatives, isLoading }
 }
